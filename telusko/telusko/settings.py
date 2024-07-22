@@ -117,6 +117,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+# Specify that we have all the static files are placed at below location
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,"static")
+]
+# Now we will pick all files from static folder and put them in another folder (assets) 
+# Django will put all our static files into this assets folde4
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
